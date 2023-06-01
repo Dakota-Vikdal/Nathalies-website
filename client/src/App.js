@@ -1,12 +1,13 @@
-import './stylesheets/App.css';
+import { Routes, Route } from 'react-router-dom'
+import { Home, NotFound } from './components/landings'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>This is going to be Nathalie's website believe it or not</h1>
-      </header>
-    </div>
+    <Routes>
+      <Route index element ={ <Home /> } />
+      <Route path='*' element={ <NotFound /> } />
+    </Routes>
   );
 }
 
